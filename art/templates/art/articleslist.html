@@ -1,0 +1,17 @@
+{% load static %}
+<html lang='en' dir='ltr'>
+    <head>
+        <meta charset="utf-8">
+        <title><h1>art</h1></title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+    </head>
+    <body>
+        <p><h1> به نام خدا</h1></p>
+        <p><h2> ARTICLES</h2></p>
+        {% for article in articles %}
+        <h2><a href="#">{{article.title}}</a></h2>
+        <p>{{article.snipet}}</p>
+        <p>{{article.date}}</p>
+        {% endfor %}
+    </body>
+</html>
